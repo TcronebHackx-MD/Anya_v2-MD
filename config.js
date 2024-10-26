@@ -8,8 +8,8 @@ module.exports = {
     /**
      * bot details and parameters
      */
-    botname: process.env.BotName || "Queen Anya Bot",
-    footer: process.env.Footer || "© Queen Anya Bot",
+    botname: process.env.BotName || "Qᴜᴇᴇɴ ᴀɴʏᴀ ᴠ2",
+    footer: process.env.Footer || "© 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐐𝐮𝐞𝐞𝐧 𝐀𝐧𝐲𝐚 𝐁𝐨𝐭",
     prefa: process.env.Prefix || "-",
     themeemoji: process.env.ThemeEmoji || "🎐",
 
@@ -23,12 +23,12 @@ module.exports = {
     /**
      * other details and parameters
      */
-    author: process.env.Author || "@PikaBotz",
-    packname: process.env.PackName || "Queen Anya v2 MD",
+    author: process.env.Author || "𝐏𝐢𝐤𝐚𝐁𝐨𝐭𝐳 🌚🌙",
+    packname: process.env.PackName || "𝕼𝖚𝖊𝖊𝖓 𝕬𝖓𝖞𝖆 𝖁2 𝕾𝖙𝖎𝖈𝖐𝖊𝖗 𝕻𝖆𝖈𝖐 🪀",
     socialLink: process.env.Web || "https://github.com/PikaBotz",
     groupLink: process.env.GcLink || "https://chat.whatsapp.com/E490r0wSpSr89XkCWeGtnX",
     warns: Number(process.env.Warn_Limits) || 3,
-    cooldown: 5, // default cooldown time per command in seconds
+    cooldown: Number(process.env.Cooldown_Timer_Seconds) || 5, // default cooldown time per command in seconds
     mongoUrl: process.env.MongoDB || "YOUR_MONGODB_URL",
     sessionId: process.env.SESSION_ID || "YXhxZ_Queen-Anya_XZ_Queen-Anya_sdGw=",
 
@@ -60,5 +60,18 @@ module.exports = {
         ban: `You're banned from using this bot!`,
         nsfw: 'This group is not *NSFW* enabled.',
         banChat: 'This group is banned from using this bot, please contact owner to get unbanned.'
+    },
+    Port: process.env.Port || "8080",
+
+    /**
+     * external APIs
+     */
+    api: {
+        api1: "https://www.guruapi.tech" // Guru's API
     }
+}
+
+global.connectionMessageSent = false;
+global.game = {
+    tictactoe: {}
 }
